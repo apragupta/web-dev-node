@@ -5,7 +5,15 @@ let tuits = posts;
 const createTuit = (req,res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime() + '';
-    newTuit.likes = 0;
+    newTuit.stats  = {"likes":0, "comments":0, "retuits": 0}
+    //default username and image is: Apra Gupta
+    newTuit.postedBy = {
+        "username": "Apra Gupta"
+    }
+    newTuit.handle = "apragupta"
+
+    newTuit["avatar-image"] = "https://i.imgur.com/dUUJ6Gm.jpeg"
+
     tuits.push(newTuit);
     res.json(newTuit);
 }
