@@ -4,7 +4,6 @@ let tuits = posts;
 
 const createTuit = (req,res) => {
     const newTuit = req.body;
-    console.log(newTuit)
     newTuit._id = (new Date()).getTime() + '';
     newTuit.stats  = {"likes":0, "comments":0, "retuits": 0}
     //default username and image is: Apra Gupta
