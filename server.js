@@ -9,6 +9,7 @@ import mongoose from "mongoose";
 // const local_db_url = 'mongodb://localhost:27017/webdev'
 
 const DB_CONNECTION_URL = process.env.WD_DB_URL
+console.log(DB_CONNECTION_URL)
 mongoose.connect(DB_CONNECTION_URL)
 const app = express();
 app.use(express.json());
